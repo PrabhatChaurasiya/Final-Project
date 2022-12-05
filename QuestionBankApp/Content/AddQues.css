@@ -1,0 +1,12 @@
+﻿.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row {
+    padding: 50px 50px 50px 50px;
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin-left: 5px;
+}

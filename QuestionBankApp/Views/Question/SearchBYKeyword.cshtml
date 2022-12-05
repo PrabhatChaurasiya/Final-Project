@@ -1,0 +1,16 @@
+﻿@model QuestionBankApp.Models.Question_Table1
+
+@{
+    ViewBag.Title = "SearchBYKeyword";
+}
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <p>Enter The Question: @Html.EditorFor(m => m.searchkeyword)</p>
+            <p><button type="submit" class="btn btn-danger text-dark">Post The Question</button></p>
+            @Html.ActionLink("Search", "Search", new { }, new { @class = "btn btn-outline-success text-dark mt-3" })
+        </div>
+    }
+
+</div>

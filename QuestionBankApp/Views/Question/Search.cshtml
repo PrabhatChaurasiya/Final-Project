@@ -1,0 +1,22 @@
+﻿@model List<QuestionBankApp.Models.Question_Table1>
+
+@{
+    ViewBag.Title = "Search";
+    var count = 1;
+}
+
+<h2 style="text-align:center;color:indianred">Search</h2>
+<div class="container">
+@foreach (var qn in Model)
+{
+    <div class="row">
+        <h5>@count . @qn.Question</h5>
+        <h6>A. @qn.Option1</h6>
+        <h6>B. @qn.Option2 </h6>
+        <h6>C. @qn.Option3 </h6>
+        <h6>D. @qn.Option4</h6>
+    </div>
+    count += 1;
+}
+
+</div>

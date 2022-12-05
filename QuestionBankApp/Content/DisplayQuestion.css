@@ -1,0 +1,12 @@
+﻿/*.container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.row
+{
+    background-color:antiquewhite;
+    border-radius:10px;
+    margin:4px;
+}*/
