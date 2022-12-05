@@ -1,0 +1,29 @@
+				BLOG TABLE
+------------------------------------------------------------------------
+CREATE TABLE [dbo].[BlogsTable] (
+    [BlogId]     INT            IDENTITY (1, 1) NOT NULL,
+    [BlogTitle]  NVARCHAR (MAX) NOT NULL,
+    [images]     NVARCHAR (MAX) NOT NULL,
+    [messages]   NVARCHAR (MAX) NOT NULL,
+    [UId]        INT            NOT NULL,
+    [ratings]    INT            NOT NULL,
+    [TravelDate] NVARCHAR (50)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([BlogId] ASC),
+    CONSTRAINT [FK_BlogsTable_UserTable] FOREIGN KEY ([UId]) REFERENCES [dbo].[UserTable] ([UserId])
+);
+-----------------------------------------------------------------------------------------------------------
+
+			USER TABLE
+-----------------------------------------------------------------------------------------------------------
+CREATE TABLE [dbo].[UserTable] (
+    [UserId]   INT           IDENTITY (1, 1) NOT NULL,
+    [UserName] NVARCHAR (50) NOT NULL,
+    [Name]     NVARCHAR (50) NOT NULL,
+    [Address]  NVARCHAR (50) NOT NULL,
+    [mobileNo] BIGINT        NOT NULL,
+    [email]    NVARCHAR (50) NOT NULL,
+    [password] NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([UserId] ASC),
+    UNIQUE NONCLUSTERED ([UserName] ASC)
+);
+

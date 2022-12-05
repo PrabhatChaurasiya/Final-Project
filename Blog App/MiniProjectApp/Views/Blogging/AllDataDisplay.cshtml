@@ -1,0 +1,25 @@
+﻿@model List<MiniProjectApp.Models.BlogsTable>
+
+@{
+    ViewBag.Title = "AllDataDisplay";
+}
+
+<h2>All Blogs </h2>
+<div class="contain">
+    @foreach (var blogs in Model)
+    {
+
+            <div class="rows">
+                <h4>Blog ID : @blogs.BlogId</h4>
+                <h4>Blog Title : @blogs.BlogTitle</h4>
+                <img src="@blogs.images" />
+                <h4>@blogs.messages</h4>
+                <h4>Travel Date : @blogs.TravelDate</h4>
+                <h4>Rating : @blogs.ratings</h4>
+            </div>
+
+    }
+</div>
+
+
+
